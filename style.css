@@ -1,0 +1,248 @@
+/* body ve arka plan */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #2c3e50, #34495e); /* Koyu ve elegant degrade */
+    color: #fff;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* sayfa başlığı */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 3em;
+    text-shadow: 2px 2px 10px rgba(255,255,255,0.3);
+}
+
+/* fadeIn animasyonu */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* arama formu */
+.search-container {
+    max-width: 500px;
+    margin: 30px auto;
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    text-align: center;
+}
+
+.search-container input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+    outline: none;
+    font-size: 1em;
+}
+
+.search-container input[type="submit"] {
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-container input[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Yeni Kitap Ekle butonu */
+.add-button {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 12px 30px;
+    border-radius: 10px;
+    background: #2ecc71;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.add-button:hover {
+    background: #27ae60;
+    transform: translateY(-2px);
+}
+/* Liste kapsayıcı */
+.book-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* Her kitap kartı */
+.book-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Kitap başlığı ve bilgileri */
+.book-info {
+    flex: 1 1 60%;
+    color: #fff;
+}
+
+/* Butonlar */
+.button {
+    display: inline-block;
+    padding: 8px 18px;
+    margin-left: 10px;
+    border-radius: 8px;
+    background: #3498db;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+/* Form kapsayıcı */
+.form-container {
+    max-width: 500px;
+    margin: 20px auto;
+    background: rgba(255,255,255,0.05);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+/* Form satırları */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.form-row input[type="text"],
+.form-row input[type="number"] {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.form-row input[type="text"]:focus,
+.form-row input[type="number"]:focus {
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 5px rgba(52,152,219,0.7);
+}
+
+.form-row.buttons {
+    display: flex;
+    justify-content: center;   /* yatayda ortala */
+    gap: 15px;                 /* butonlar arası boşluk */
+}
+
+/* Ekle butonu (submit) */
+.form-row.buttons input[type="submit"],
+.form-row.buttons .button-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 25px;
+    min-width: 120px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 8px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover efektleri */
+.form-row.buttons input[type="submit"]:hover,
+.form-row.buttons .button-link:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+/* Detay sayfası kapsayıcı */
+.detail-container {
+    max-width: 600px;
+    margin: 50px auto; /* sayfa ortalama */
+    padding: 20px;
+    background: rgba(0,0,0,0.7); /* yarı saydam koyu kutu */
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    text-align: left;
+    font-family: Arial, sans-serif;
+}
+
+/* Satır düzeni */
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #555;
+}
+
+/* Buton satırı */
+.detail-buttons {
+    display: flex;
+    justify-content: center; /* yatayda ortala */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Butonlar */
+.detail-buttons .button-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 25px;
+    min-width: 100px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.detail-buttons .button-link:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+
